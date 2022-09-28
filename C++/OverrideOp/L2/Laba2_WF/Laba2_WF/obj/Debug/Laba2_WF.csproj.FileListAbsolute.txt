@@ -1,0 +1,10 @@
+D:\studentHelp\03.12.2021\L2\Laba2_WF\Laba2_WF\obj\Debug\Laba2_WF.csproj.AssemblyReference.cache
+D:\studentHelp\03.12.2021\L2\Laba2_WF\Laba2_WF\obj\Debug\Laba2_WF.Form1.resources
+D:\studentHelp\03.12.2021\L2\Laba2_WF\Laba2_WF\obj\Debug\Laba2_WF.Properties.Resources.resources
+D:\studentHelp\03.12.2021\L2\Laba2_WF\Laba2_WF\obj\Debug\Laba2_WF.csproj.GenerateResource.cache
+D:\studentHelp\03.12.2021\L2\Laba2_WF\Laba2_WF\obj\Debug\Laba2_WF.csproj.CoreCompileInputs.cache
+D:\studentHelp\03.12.2021\L2\Laba2_WF\Laba2_WF\bin\Debug\Laba2_WF.exe.config
+D:\studentHelp\03.12.2021\L2\Laba2_WF\Laba2_WF\bin\Debug\Laba2_WF.exe
+D:\studentHelp\03.12.2021\L2\Laba2_WF\Laba2_WF\bin\Debug\Laba2_WF.pdb
+D:\studentHelp\03.12.2021\L2\Laba2_WF\Laba2_WF\obj\Debug\Laba2_WF.exe
+D:\studentHelp\03.12.2021\L2\Laba2_WF\Laba2_WF\obj\Debug\Laba2_WF.pdb

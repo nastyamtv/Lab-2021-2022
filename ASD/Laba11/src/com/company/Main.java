@@ -1,0 +1,20 @@
+package com.company;
+
+public class Main {
+
+    private static double func(int n) {
+        double f = 1;
+        double s=1;
+
+        if (n == 1) {
+            return s+1;
+        }
+        f = Math.log(n) * func(n-1)*1.0/8;
+        s=s+f;
+        return s;
+    }
+    public static void main(String[] args) {
+        System.out.printf("Result = %.3f%n", func(2));
+        //System.out.println(factorial(1));
+    }
+}

@@ -1,0 +1,82 @@
+package com.company;
+import org.w3c.dom.events.MouseEvent;
+
+import javax.swing.*;
+import java.awt.*;
+import  java.awt.event.*;
+
+class Main extends Frame{
+    String botSelected = "";
+    MenuItem r,y,i;
+    PopupMenu md;
+    Main(String s, int w, int h){
+        super(s);
+        setLayout(null);
+        Font f = new Font("Serif", Font.BOLD, 15);
+        enableEvents(AWTEvent.MOUSE_EVENT_MASK);
+        setFont(f);
+        setSize(650, 500);
+        setVisible(true);
+
+        md= new PopupMenu();
+        add(md);
+        r = new MenuItem("r");
+        md.add(r);
+
+
+
+        Label l1 = new Label("Q - Yellow");
+        l1.setBounds(290, 50, 300, 30); add(l1);
+        Label l2 = new Label("W - Red:");
+        l2.setBounds(290, 75, 300, 30); add(l2);
+        Label l3 = new Label("E - Incription:");
+        l3.setBounds(290, 100, 300, 30); add(l3);
+        AWTEventListener listener = new AWTEventListener() {
+            @Override
+            public void eventDispatched(AWTEvent ev) {
+                if (ev instanceof KeyEvent) {
+                    KeyEvent key = (KeyEvent) ev;
+                    if (key.getID() == KeyEvent.KEY_PRESSED && KeyEvent.getKeyText(key.getKeyCode()).equals("Q")) {
+                        botSelected = "YELLOW";
+                        repaint();
+
+                    }
+                    if (key.getID() == KeyEvent.KEY_PRESSED && KeyEvent.getKeyText(key.getKeyCode()).equals("W")) {
+                        botSelected = "RED";
+                        repaint();
+                    }
+                    if (key.getID() == KeyEvent.KEY_PRESSED && KeyEvent.getKeyText(key.getKeyCode()).equals("E")) {
+                        botSelected = "INCRIPTION";
+                        repaint();
+                    }
+                }
+            }
+        };
+
+        Toolkit.getDefaultToolkit().addAWTEventListener(listener, AWTEvent.KEY_EVENT_MASK);
+        }
+
+    public void paint(Graphics g) {
+        super.paint(g);
+        g.drawRect(175, 150, 300, 300);
+        if (botSelected.equals("YELLOW")) {
+            g.setColor(new Color(0xFFF700));
+            g.fillRect(175, 150, 301, 301);
+        }
+        if (botSelected.equals("RED")) {
+            g.setColor(new Color(0xFF0000));
+            g.fillRect(175, 150, 301, 301);
+        }
+        if (botSelected.equals("INCRIPTION")) {
+            Label l1 = new Label("Square:", Label.CENTER);
+            l1.setBounds(270, 455, 120, 25); add(l1);
+        }
+    }
+    public  static void main(String[] args){
+        SwingUtilities.invokeLater(new Runnable() {
+            public  void run(){
+                new Main("Laba", 1000, 600);
+            }
+        });
+    }
+}
